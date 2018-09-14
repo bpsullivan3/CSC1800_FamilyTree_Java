@@ -1,0 +1,140 @@
+W spouse Charles
+Diana
+
+X Charles spouse Diana
+Yes
+
+W spouse Charles
+Camilla
+
+X Charles spouse Diana
+No
+
+W child Elizabeth
+Andrew
+Anne
+Charles
+Edward
+
+W sibling Andrew
+Anne
+Charles
+Edward
+
+W ancestor James
+Edward
+Elizabeth
+Phillip
+Sophie
+
+W cousin Sophie
+
+W cousin Anne
+Andrew
+Beatrice
+Charles
+Charlotte
+Edward
+Eugenie
+George
+Harry
+James
+LadyLouise
+Louis
+William
+
+W unrelated Sophie
+Andrew
+Anne
+Autumn
+Beatrice
+Camilla
+Charles
+Charlotte
+Diana
+Edward
+Elizabeth
+Eugenie
+George
+Harry
+Kate
+Louis
+Mark
+Meghan
+Mike
+Peter
+Phillip
+Sarah
+Sophie
+Timothy
+William
+Zara
+
+W unrelated Phillip
+Autumn
+Camilla
+Diana
+Elizabeth
+Kate
+Mark
+Meghan
+Mike
+Phillip
+Sarah
+Sophie
+Timothy
+
+X Peter child Anne
+Yes
+
+X Peter child Timothy
+No
+
+X Peter sibling Anne
+No
+
+X Peter sibling Zara
+Yes
+
+X Elizabeth ancestor Diana
+No
+
+X Elizabeth ancestor Zara
+Yes
+
+X Zara ancestor Andrew
+No
+
+X Diana cousin William
+No
+
+X William cousin Harry
+Yes
+
+X Andrew cousin Zara
+Yes
+
+X Diana unrelated Elizabeth
+Yes
+
+X Andrew unrelated Sarah
+Yes
+
+X Zara unrelated Elizabeth
+No
+
+X Zara child Zara
+No
+
+X Zara ancestor Zara
+No
+
+X Zara spouse Zara
+No
+
+X Zara unrelated Zara
+Yes
+
+X Zara cousin Zara
+No
+

@@ -1,0 +1,55 @@
+E Elizabeth Phillip
+E Elizabeth Phillip Charles
+E Charles Diana
+W spouse Charles
+X Charles spouse Diana
+E Elizabeth Phillip Andrew
+E Andrew Sarah
+E Andrew Sarah Eugenie
+E Andrew Sarah Beatrice
+E Charles Diana William
+E Charles Diana Harry
+E Charles Camilla
+W spouse Charles
+X Charles spouse Diana
+E William Kate
+E Harry Meghan
+E Kate William George
+E Kate William Charlotte
+E Kate William Louis
+E Elizabeth Phillip Anne
+E Elizabeth Phillip Edward
+E Anne Mark
+E Anne Mark Peter
+E Anne Mark Zara
+E Anne Timothy
+E Peter Autumn
+E Zara Mike
+E Edward Sophie
+E Edward Sophie LadyLouise
+E Edward Sophie James
+W child Elizabeth
+W sibling Andrew
+W ancestor James
+W cousin Sophie
+W cousin Anne
+W unrelated Sophie
+W unrelated Phillip
+X Peter child Anne
+X Peter child Timothy
+X Peter sibling Anne
+X Peter sibling Zara
+X Elizabeth ancestor Diana
+X Elizabeth ancestor Zara
+X Zara ancestor Andrew
+X Diana cousin William
+X William cousin Harry
+X Andrew cousin Zara
+X Diana unrelated Elizabeth
+X Andrew unrelated Sarah
+X Zara unrelated Elizabeth
+X Zara child Zara
+X Zara ancestor Zara
+X Zara spouse Zara
+X Zara unrelated Zara
+X Zara cousin Zara
