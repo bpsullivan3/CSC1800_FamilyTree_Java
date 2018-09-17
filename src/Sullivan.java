@@ -38,16 +38,18 @@ public class Sullivan {
                         }
 
                         //If the entry already has a spouse, adjust accordingly
-                        if(entry1.getSpouse() != null && !entry1.getSpouse().equals(entry2)){
-                            entry1.getSpouse().setSpouse(null);
+                        if(entry1.getCurrSpouse() != null && !entry1.getCurrSpouse().equals(entry2)){
+                            entry1.getCurrSpouse().setCurrSpouse(null);
                         }
-                        if(entry2.getSpouse() != null && !entry2.getSpouse().equals(entry1)){
-                            entry2.getSpouse().setSpouse(null);
+                        if(entry2.getCurrSpouse() != null && !entry2.getCurrSpouse().equals(entry1)){
+                            entry2.getCurrSpouse().setCurrSpouse(null);
                         }
 
                         //Finally, set the proper spouse for the entry
-                        entry1.setSpouse(entry2);
-                        entry2.setSpouse(entry1);
+                        entry1.setCurrSpouse(entry2);
+                        entry1.addSpouse(entry2);
+                        entry2.setCurrSpouse(entry1);
+                        entry2.addSpouse(entry1);
                     }
                     else if(parts.length == 4){ //Indicates New Child
                         Person parent1 = tree.getPerson(parts[1]);
@@ -64,14 +66,16 @@ public class Sullivan {
                         }
 
                         //If the parents are not married, marry them the same way as above
-                        if(parent1.getSpouse() != null && !parent1.getSpouse().equals(parent2)){
-                            parent1.getSpouse().setSpouse(null);
+                        if(parent1.getCurrSpouse() != null && !parent1.getCurrSpouse().equals(parent2)){
+                            parent1.getCurrSpouse().setCurrSpouse(null);
                         }
-                        if(parent2.getSpouse() != null && !parent2.getSpouse().equals(parent1)){
-                            parent1.getSpouse().setSpouse(null);
+                        if(parent2.getCurrSpouse() != null && !parent2.getCurrSpouse().equals(parent1)){
+                            parent1.getCurrSpouse().setCurrSpouse(null);
                         }
-                        parent1.setSpouse(parent2);
-                        parent2.setSpouse(parent1);
+                        parent1.setCurrSpouse(parent2);
+                        parent1.addSpouse(parent2);
+                        parent2.setCurrSpouse(parent1);
+                        parent2.addSpouse(parent1);
 
                         //Create the child
                         if(tree.getPerson(parts[3]) != null){
@@ -110,7 +114,9 @@ public class Sullivan {
                             }
                             break;
                         case("spouse"):
-                            System.out.println(entry.getSpouse());
+                            for(String spouse : entry.getAllSpouses()){
+                                System.out.println(spouse);
+                            }
                             break;
                         case("sibling"):
                             for(String sibling : entry.getSiblings()){

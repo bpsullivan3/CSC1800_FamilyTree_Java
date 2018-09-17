@@ -6,6 +6,7 @@ Yes
 
 W spouse Charles
 Camilla
+Diana
 
 X Charles spouse Diana
 No

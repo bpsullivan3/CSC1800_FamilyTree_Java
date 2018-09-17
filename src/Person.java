@@ -9,7 +9,8 @@ import java.util.Collections;
 
 public class Person {
     private String name;
-    private Person spouse;
+    private Person currSpouse;
+    private ArrayList<String> allSpouses;
     private Person parent1;
     private Person parent2;
     private ArrayList<String> children;
@@ -17,7 +18,8 @@ public class Person {
     //Name Constructor
     public Person(String name){
         this.name = name;
-        this.spouse = null;
+        this.currSpouse = null;
+        this.allSpouses = new ArrayList<>();
         this.parent1 = null;
         this.parent2 = null;
         this.children = new ArrayList<>();
@@ -26,7 +28,8 @@ public class Person {
     //Child Constructor
     public Person(String name, Person inParent1, Person inParent2){
         this.name = name;
-        this.spouse = null;
+        this.currSpouse = null;
+        this.allSpouses = new ArrayList<>();
         this.parent1 = inParent1;
         this.parent2 = inParent2;
         this.children = new ArrayList<>();
@@ -36,8 +39,8 @@ public class Person {
         return name;
     }
 
-    public Person getSpouse() {
-        return spouse;
+    public Person getCurrSpouse() {
+        return currSpouse;
     }
 
     public Person getParent1(){
@@ -52,8 +55,10 @@ public class Person {
         return children;
     }
 
-    public void setSpouse(Person spouse) {
-        this.spouse = spouse;
+    public ArrayList<String> getAllSpouses() { return allSpouses; }
+
+    public void setCurrSpouse(Person spouse) {
+        this.currSpouse = spouse;
     }
 
     public void setParent1(Person parent1) {
@@ -68,6 +73,11 @@ public class Person {
     public void addChild(Person child){
         this.children.add(child.getName());
         Collections.sort(children);
+    }
+
+    public void addSpouse(Person spouse){
+        if(!allSpouses.contains(spouse.getName())) this.allSpouses.add(spouse.getName());
+        Collections.sort(allSpouses);
     }
 
     //Scan up from the family tree for the mention of p2
@@ -118,8 +128,8 @@ public class Person {
 
     //Check if this person is the spouse of the given person
     public boolean isSpouse(Person p2){
-        if(spouse == null) return false;
-        return spouse.equals(p2);
+        if(currSpouse == null) return false;
+        return currSpouse.equals(p2);
     }
 
     //Check if this person is a sibling of the given person (half-siblings count)
