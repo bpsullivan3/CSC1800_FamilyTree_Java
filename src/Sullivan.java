@@ -99,13 +99,13 @@ public class Sullivan {
                         break;
                     }
 
+                    System.out.println(query);
+
                     Person entry = tree.getPerson(parts[2]);
                     if(entry == null){
-                        entry = new Person(parts[2]);
-                        tree.addPerson(entry);
+                        System.out.println(parts[2] + " does not exist!");
+                        break;
                     }
-
-                    System.out.println(query);
 
                     switch(parts[1]){
                         case("child"):
@@ -153,17 +153,18 @@ public class Sullivan {
                         break;
                     }
 
+                    System.out.println(query);
+
                     Person entry1 = tree.getPerson(parts[1]);
                     if(entry1 == null){
-                        entry1 = new Person(parts[1]);
-                        tree.addPerson(entry1);
+                        System.out.println(parts[1] + " does not exist!");
+                        break;
                     }
                     Person entry2 = tree.getPerson(parts[3]);
                     if(entry2 == null){
-                        entry2 = new Person(parts[3]);
-                        tree.addPerson(entry2);
+                        System.out.println(parts[3] + " does not exist!");
+                        break;
                     }
-                    System.out.println(query);
 
                     switch(parts[2]){
                         case("child"):
