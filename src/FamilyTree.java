@@ -3,7 +3,7 @@ import java.util.Collections;
 import java.util.HashMap;
 
 /*
-Author: Patrick Sullivan
+Author: Patrick Main
 
 A class to keep track of and manage a family tree of objects of type Person
  */

@@ -1,5 +1,5 @@
 /*
-Author: Patrick Sullivan
+Author: Patrick Main
 
 A class to support the members of a family tree.
 
